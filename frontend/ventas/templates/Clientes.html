@@ -1,0 +1,128 @@
+{% extends 'master.html' %}
+
+
+{% block contenido %}
+<script src="/static/js2/cliente.js"></script>
+
+
+
+<form class="card">
+    <div class="card-header">
+        <h4 class="card-title">Cliente</h4>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="col-5">
+                            <label class="form-label">Text</label>
+                            <input id="txRut" class="form-control" name="txRut" maxlength="10" type="text" value="1"
+                                placeholder="Rut">
+                        </div>
+                        <div class="col-2">
+                            <input id="txDv" class="form-control" name="txDv" maxlength="1" size="1" type="text"
+                                value="1" placeholder="DV">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Nombres</label>
+                        <input class="form-control" id="txNombres" name="txNombres" maxlength="30" sizex="30"
+                            type="text" value="" placeholder="Nombres">
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Ap.Paterno</label>
+                        <input class="form-control" id="txPaterno" name="txPaterno" maxlength="30" sizex="30"
+                            type="text" value="" placeholder="Paterno">
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Ap.Materno</label>
+                        <input class="form-control" id="txMaterno" name="txMaterno" maxlength="30" sizex="30"
+                            type="text" value="" placeholder="Materno">
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Email</label>
+                        <input class="form-control" id="txEMail" name="txEMail" maxlength="30" sizex="30" type="text"
+                            value="" placeholder="Mail">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Género</label>
+                        <select type="text" class="form-select mb-3 is-valid" id="cbGenero" name="cbGenero" value="">
+                            <option value="pl">Poland</option>
+                            <option value="de">Germany</option>
+                            <option value="cz">Czech Republic</option>
+                            <option value="br">Brazil</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Región</label>
+                        <select type="text" class="form-select mb-3 is-valid" id="cbRegion" name="cbRegion"
+                            onchange="javascript:loadProvincia()" value="">
+                            <option value="pl">Poland</option>
+                            <option value="de">Germany</option>
+                            <option value="cz">Czech Republic</option>
+                            <option value="br">Brazil</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Región</label>
+                        <select type="text" class="form-select mb-3 is-valid" id="cbProvincia" name="cbProvincia"
+                            onchange="javascript:loadComuna()" value="">
+                            <option value="pl">Poland</option>
+                            <option value="de">Germany</option>
+                            <option value="cz">Czech Republic</option>
+                            <option value="br">Brazil</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Región</label>
+                        <select type="text" class="form-select mb-3 is-valid" id="cbComuna" name="cbComuna"
+                            onchange="javascript:loadComuna()" value="">
+                            <option value="pl">Poland</option>
+                            <option value="de">Germany</option>
+                            <option value="cz">Czech Republic</option>
+                            <option value="br">Brazil</option>
+                        </select>
+                    </div>
+                    <table border=1>
+                        <tr>
+                            <td colspan="2">
+                                <button id="btLeer" onclick="javascript:clienteLeer()">Leer</button>
+                                <button disabled id="btModificar"
+                                    onclick="javascript:empleadoActualizar()">Modificar</button>
+                                <button disabled id="btAgregar" onclick="javascript:empleadoAgregar()">Agregar</button>
+                                <button disabled id="btEliminar"
+                                    onclick="javascript:empleadoEliminar()">Eliminar</button>
+                                <button disabled id="btLimpiar" onclick="javascript:limpiar()">Limpiar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button id="btListarArr"
+                                    onclick="javascript:empleadoListarArreglo()">ListarArreglo</button>
+                                <button id="btListarArr" onclick="javascript:empleadoListarInnerHtml()">Listar Inner
+                                    Html</button>
+                                <!-- <button id="btListarArr" onclick="javascript:empleadoListarHtmlPython()">Listar Html Python</button> 
+                <button id="btListarArr" onclick="javascript:empleadoListarHtmlViews()">Listar Html Views</button>  -->
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <form method="POST" action="/puebla">
+    </form>
+
+
+
+
+    <div id="objInner">Reescribiremos este código</div>
+
+
+    {% endblock contenido %}

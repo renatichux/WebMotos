@@ -1,0 +1,88 @@
+{% extends 'master.html' %}
+
+
+{% block contenido %}
+<script src="/static/js2/productos.js"></script>
+
+
+
+<form class="card">
+    <div class="card-header">
+        <h4 class="card-title">Productos</h4>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="col-12">
+                            <label class="form-label">Id producto</label>
+                            <input class="form-control" id="txProducto" name="txProducto" maxlength="30" sizex="30"
+                                type="text" value="" placeholder="ID producto">
+                        </div>
+                        
+                        <div class="col-5">
+                            <label class="form-label">Nombre</label>
+                            <input id="txNombre" class="form-control" name="txNombre" maxlength="10" type="text" value="1"
+                                placeholder="Nombre producto">
+                        </div>
+                        
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Descripcion</label>
+                        <input class="form-control" id="txDesc" name="txDesc" maxlength="30" sizex="30"
+                            type="text" value="" placeholder="Descripcion corta">
+                    </div>
+                    
+
+                    <div class="col-12">
+                        <label class="form-label">Precio</label>
+                        <input class="form-control" id="txDireccion" name="txDireccion" maxlength="30" sizex="30"
+                            type="text" value="" placeholder="Direccion">
+                    </div>
+                   
+
+
+                    
+                    <table border=1>
+                        <tr>
+                            <td colspan="2">
+                                <button id="btLeer" onclick="javascript:productoLeer()">Leer</button>
+                                <button disabled id="btModificar"
+                                    onclick="javascript:productoActualizar()">Modificar</button>
+                                <button disabled id="btAgregar" onclick="javascript:productoAgregar()">Agregar</button>
+                                <button disabled id="btEliminar"
+                                    onclick="javascript:productoEliminar()">Eliminar</button>
+                                <button disabled id="btLimpiar" onclick="javascript:limpiar()">Limpiar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button id="btListarArr"
+                                    onclick="javascript:empleadoListarArreglo()">ListarArreglo</button>
+                                <button id="btListarArr" onclick="javascript:empleadoListarInnerHtml()">Listar Inner
+                                    Html</button>
+                                <!-- <button id="btListarArr" onclick="javascript:empleadoListarHtmlPython()">Listar Html Python</button> 
+                <button id="btListarArr" onclick="javascript:empleadoListarHtmlViews()">Listar Html Views</button>  -->
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <form method="POST" action="/puebla">
+    </form>
+
+
+
+
+    <div id="objInner">Reescribiremos este código</div>
+
+
+    {% endblock contenido %}

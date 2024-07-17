@@ -1,0 +1,76 @@
+{% extends 'master.html' %}
+
+
+{% block contenido %}
+<script src="/static/js2/cargos.js"></script>
+
+
+
+<form class="card">
+    <div class="card-header">
+        <h4 class="card-title">Cargo empleados</h4>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="col-5">
+                            <label class="form-label">Codigo Cargo</label>
+                            <input id="txCodigo" class="form-control" name="txCodigo" maxlength="10" type="text" value="1"
+                                placeholder="Codigo">
+                        </div>
+                        
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Nombre</label>
+                        <input class="form-control" id="txNombre" name="txNombre" maxlength="30" sizex="30"
+                            type="text" value="" placeholder="Nombre cargo">
+                    </div>
+               
+                   
+
+
+                    
+                    <table border=1>
+                        <tr>
+                            <td colspan="2">
+                                <button id="btLeer" onclick="javascript:cargosLeer()">Leer</button>
+                                <button disabled id="btModificar"
+                                    onclick="javascript:cargosActualizar()">Modificar</button>
+                                <button disabled id="btAgregar" onclick="javascript:cargosAgregar()">Agregar</button>
+                                <button disabled id="btEliminar"
+                                    onclick="javascript:empleadoEliminar()">Eliminar</button>
+                                <button disabled id="btLimpiar" onclick="javascript:limpiar()">Limpiar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button id="btListarArr"
+                                    onclick="javascript:empleadoListarArreglo()">ListarArreglo</button>
+                                <button id="btListarArr" onclick="javascript:empleadoListarInnerHtml()">Listar Inner
+                                    Html</button>
+                                <!-- <button id="btListarArr" onclick="javascript:empleadoListarHtmlPython()">Listar Html Python</button> 
+                <button id="btListarArr" onclick="javascript:empleadoListarHtmlViews()">Listar Html Views</button>  -->
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <form method="POST" action="/puebla">
+    </form>
+
+
+
+
+    <div id="objInner">Reescribiremos este código</div>
+
+
+    {% endblock contenido %}
